@@ -75,3 +75,16 @@ The validation process focuses on:
 - Records requiring manual review
 
 This approach ensures that data quality issues are identified before any transformations are applied.
+
+## 7. Dimension Tables
+
+After cleaning the data, separate dimension tables were created to organize descriptive information and support relational analysis.
+
+The following dimension tables were created:
+
+- **dim_hospital** – Stores unique hospitals and their associated counties.
+- **dim_county** – Stores unique county names.
+- **dim_doctor** – Stores unique doctor identifiers.
+- **dim_disease** – Stores unique disease categories.
+
+These dimension tables reduce data redundancy and make reporting queries simpler and easier to maintain. They also demonstrate dimensional modeling concepts commonly used in data warehouses and business intelligence systems.
