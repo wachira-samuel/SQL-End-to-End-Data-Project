@@ -195,3 +195,113 @@ The following dimension tables were created:
 
 These dimension tables reduce redundancy, simplify joins, and demonstrate dimensional modeling concepts commonly used in data warehouses and business intelligence solutions.
 
+## 10. Reporting Layer
+
+Views
+
+- vw_patient_reporting
+- vw_hospital_summary
+- vw_county_summary
+- vw_doctor_summary
+- vw_payment_summary
+- vw_follow_up_summary
+
+These views provide reusable datasets for reporting and dashboards.
+
+## 11. Project Structure
+
+
+      SQL-End-to-End-Data-project/
+
+            │
+
+
+            │
+
+            ├── 01 create_database.sql
+
+            ├── 02create_raw_table.sql 
+
+            ├── 03 cleaned_patient_records.sql
+
+            ├── 04 create_dimension_tables.sql
+
+            ├── 05 data_validation.sql
+
+            ├── 06_standardised_patient_records.sql
+
+            ├── 07_reporting_views.sql
+
+            └── 08_analysis_queries.sql
+
+            │
+
+            └── README.md
+
+## Business Questions Answered
+
+The `analysis_queries.sql file` answers about 80 business questions including:
+
+## 1. Hospital Operations
+
+- Which hospital has the highest workload?
+- Which hospitals are above average workload?
+- Which hospitals have the longest patient stays?
+
+## 2. County Analysis
+
+- Which counties have the highest healthcare demand?
+- Which counties have the highest treatment costs?
+
+## 3. Doctor Analysis
+
+- Which doctors have the highest workload?
+- Which doctors manage the most follow-up cases?
+
+## 4. Finance
+
+- Outstanding payment balances
+- Payment reconciliation
+- Hospitals with highest unpaid balances
+
+## 5. Reporting
+
+- Hospital Summary
+- County Summary
+- Doctor Summary
+- Payment Summary
+
+## Key Insights
+
+Example insights generated from the analysis include:
+
+- Hospitals with the highest patient volumes experience greater operational pressure.
+- Counties with fewer hospitals but high patient counts may require additional healthcare investment.
+- Some doctors manage significantly larger workloads than others, indicating potential staffing imbalances.
+- Outstanding payment balances vary considerably across hospitals and counties.
+- Standardized reporting enables consistent operational monitoring and financial reconciliation.
+
+## Recommendations
+
+## 1. Operational Recommendations
+
+- Rebalance doctor workloads across hospitals.
+- Increase staffing in high-demand hospitals.
+- Monitor long-stay patients to improve bed utilization.
+- Strengthen follow-up processes for high-risk patients.
+
+## 2. Financial Recommendations
+
+- Prioritize collection efforts for hospitals with large outstanding balances.
+- Investigate records with payments exceeding treatment costs.
+- Improve payment reconciliation using standardized reporting views.
+
+## 3. Data Engineering Recommendations
+
+- Automate the ETL process using scheduled SQL jobs or Apache Airflow.
+- Implement database constraints and validation rules to improve data quality.
+- Add logging and monitoring for future data pipelines.
+- Store raw, cleaned, and reporting datasets separately to preserve data lineage.
+
+
+
