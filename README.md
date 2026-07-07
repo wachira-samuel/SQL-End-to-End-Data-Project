@@ -213,10 +213,12 @@ These views provide reusable datasets for reporting and dashboards.
 
       SQL-End-to-End-Data-project/
 
-            │
+            └── README.md
+
+            ├── clean_patient_records.csv
 
 
-            │
+            ├── kenya_dirty_health_dataset.csv
 
             ├── 01 create_database.sql
 
@@ -234,9 +236,7 @@ These views provide reusable datasets for reporting and dashboards.
 
             └── 08_analysis_queries.sql
 
-            │
-
-            └── README.md
+          
 
 ## Business Questions Answered
 
@@ -303,5 +303,21 @@ Example insights generated from the analysis include:
 - Add logging and monitoring for future data pipelines.
 - Store raw, cleaned, and reporting datasets separately to preserve data lineage.
 
+## Challenges Faced
+
+- Multiple inconsistent date formats
+- Invalid numeric values
+- Duplicate patient records
+- Missing identifiers
+- Standardizing heterogeneous healthcare data
+
+These challenges were resolved using SQL validation, cleaning, and transformation techniques.
+
+
+## Conclusion
+
+This project demonstrates how SQL can be used to transform raw healthcare data into reliable, business-ready information. By applying data validation, cleaning, standardization, aggregation and reporting techniques, the project supports operational monitoring, financial reconciliation  and strategic decision-making.
+
+It also showcases practical SQL skills commonly required for Data Analyst and Data Engineer roles.
 
 
